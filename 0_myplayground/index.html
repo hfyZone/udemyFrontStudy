@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ancestor {
+            width: 300px;
+            height: 500px;
+            background-color: black;
+            position: absolute;
+            z-index: 1000;
+        }
+        .first,.second{
+            height: 200px;
+            width: 200px;
+            position: relative;
+        }
+        .first{
+            background-color: red;
+            z-index: 9;
+        }
+        .second{
+            background-color: green;
+            top: -20px;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="ancestor">
+        <div class="first"></div>
+        <div class="second"></div>
+    </div>
+</body>
+</html>
